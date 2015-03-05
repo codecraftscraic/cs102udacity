@@ -1,6 +1,7 @@
 import media
 import fresh_tomatoes
 
+#creating instances of the movie class with relevant info
 league_of_their_own = media.Movie("A League of Their Own",
                                   "To achieve the incredible you have to attempt the impossible.",
                                   "http://ia.media-imdb.com/images/M/MV5BMTM1NzQ1OTM3NF5BMl5BanBnXkFtZTcwMDAwMjUyMQ@@._V1_SY317_CR1,0,214,317_AL_.jpg",
@@ -73,6 +74,8 @@ liar_liar = media.Movie("Liar, Liar",
                         "21 March 1997",
                         "John Debney")
 
+#creating array of movies for fresh_tomatoes.py to iterate over
 movies = [league_of_their_own, miracle, hunger_games, toy_story, toy_story_two, toy_story_three, divergent, ten_days, liar_liar]
 
+#calling open page function to build the page dynamically
 fresh_tomatoes.open_movies_page(movies)

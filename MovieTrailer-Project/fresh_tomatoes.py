@@ -16,6 +16,7 @@ main_page_head = '''
     <style type="text/css" media="screen">
         body {
             padding-top: 80px;
+            /*changing the background of the main page*/
             background-color: gray;
         }
         #trailer .modal-dialog {
@@ -38,6 +39,7 @@ main_page_head = '''
             padding-top: 20px;
         }
         .movie-tile:hover {
+            /*changing the hover color of the tile to light purple*/
             background-color: #D8BFD8;
             cursor: pointer;
         }
@@ -123,6 +125,8 @@ movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
     <img src="{poster_image_url}" width="220" height="342">
     <h2>{movie_title}</h2>
+    <!-- Adding additional informaton to the movie tiles -->
+    <h6>{movie_storyline}</h6>
     <h4>{movie_star}</h4>
     <h5>{soundtrack_composer}</h5>
     <h6>{release_date}</h6>
@@ -141,6 +145,7 @@ def create_movie_tiles_content(movies):
         # Append the tile for the movie with its content filled in
         content += movie_tile_content.format(
             movie_title=movie.title,
+            #Additional content for movie tiles
             movie_storyline=movie.storyline,
             movie_star=movie.movie_star,
             release_date=movie.release_date,
